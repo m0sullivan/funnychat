@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="theme-dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>funny chat</title>
+    <link rel="stylesheet" href="bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+  <section class="section">
+    <div class="columns">
+      <div class="column"></div>
+      <div class="container column outer">
+        <div class="columns">
+          <h1 class="title column">
+            Funny Chat
+          </h1>
+          <a href="/">
+            <button class="has-background-dark m-2 column rounded">Refresh</button>
+          </a>
+        </div>
+        <p class="subtitle">
+          Chat with <i>Strangers</i>!
+        </p>
+        <div class="container chatbox scroll">
+          {% for i in chats %}
+            <div class="p-1 has-text-white m-1 has-background-dark">
+              <p><strong class="">{{ i['name'] }}</strong>: {{ i['chat'] }}</p>
+            </div>
+          {% endfor %}
+        </div>
+        <form action="/" method="get">
+          <div class="mt-2 m-1 columns">
+            <input type="text" class="p-2 rounded has-background-dark has-text-white is-four-fifths column mr-1" placeholder="Name" value="{{ name }}" id="name" name="name">
+            <button class="has-background-success p-2 has-text-white rounded column ml-1" type="submit">Submit</button>
+          </div>
+          <input type="text" class="p-4 rounded has-background-dark has-text-white mt-2 m-1 column is-full" placeholder="Message" value="" id="chat" name="chat">
+        </form>
+        <div class="p-6"></div>
+      </div>
+      <div class="column"></div>
+    </div>
+  </section>
+  </body>
+</html>

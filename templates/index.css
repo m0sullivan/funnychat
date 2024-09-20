@@ -1,0 +1,24 @@
+.chatbox {
+    border: 1px solid slategray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.scroll {
+    overflow-y: scroll;
+    max-height: 30em;
+    min-height: 30em;
+}
+
+.outer {
+    max-height: 10%;
+}
+
+body {
+    overflow: hidden;
+}
+
+.rounded { 
+    border: 0px solid slategray;
+    border-radius: 10px;
+}
