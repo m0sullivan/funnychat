@@ -16,7 +16,7 @@ def root():
     try:
         name = request.args["name"]
         chat = request.args["chat"]
-        cursor.execute(f"INSERT INTO chats VALUES ('{name}','{chat}')")
+        cursor.execute(f"INSERT INTO chats VALUES (?,?)", (name, chat,))
         conn.commit()
 
     except:
